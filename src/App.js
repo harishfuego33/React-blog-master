@@ -126,6 +126,7 @@ function Main() {
   );
 }
 function BlogBox({ blog }) {
+  console.log(blog);
   return (
     <>
       <div className="blog-box">
@@ -162,13 +163,9 @@ function Aside2() {
       <hr />
       <div className="categories-list">
         {categoriesList.map((list) => (
-          <Ul list={list} />
+          <ul>{list.title}</ul>
         ))}
       </div>
     </aside>
   );
-}
-function Ul(list) {
-  console.log(list);
-  return <ul>list</ul>;
 }
